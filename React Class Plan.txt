@@ -1,4 +1,6 @@
-﻿1. Why React ?
+﻿Tài liệu https://react.dev/learn/start-a-new-react-project
+
+1. Why React ?
 2. Class vs Hook (function component).  Redux vs Context API ?
 3. Setup env
 3.1 Hello world with React
