@@ -1,0 +1,18 @@
+1. Cấu hình 
+-   assets cấu hình global nơi public ra ngoài 
+-   components nơi share code có thể tái sử dụng
+-   routes nơi hướng code theo link muốn
+-   styles viết scss màu sắc ngôn ngữ..
+-   utils nơi viết vào views
+-   services nơi backend
+2. xóa file không cần thiết 
+-   App.test.js, logo.svg,setupTests.js
+Rename App.css -> App.scss
+3. Sửa trong file App.js
+import './App.css'; -> import './App.scss';
+-    Xuất hiện lỗi dụng lệnh
+npm i --save sass
+4. Chuyển file
+- App.js, App.scss, logo.svg -> views
+
+-> ĐỂ VÀO ĐỂ UPGITHUB NÓ HIỆN THƯ MỤC TRỐNG MỚI CHO ĐẨY SAU XÓA
