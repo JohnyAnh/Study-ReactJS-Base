@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.scss';
-
+import MyComponent from './Example/MyComponent';
+/**
+ * Có 2 components: class component / function component (function, arrow)
+ * JSX đặt biệt là class or function nó sử dụng JSX trả về thay vì biến thì trả về HTML
+ */
 function App() {
+  //const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,8 @@ function App() {
         >
           Learn React
         </a>
+        <MyComponent /> {/*Ưu tiên cái này*/}
+        {/* <MyComponent></MyComponent>*/} {/*Dùng để khai báo con của Componet này} */}
       </header>
     </div>
   );
