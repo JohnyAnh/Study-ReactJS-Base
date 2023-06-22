@@ -14,3 +14,5 @@ import './App.css'; -> import './App.scss';
 npm i --save sass
 4. Chuyển file
 - App.js, App.scss, logo.svg -> views
+
+Tools React cho googlechrome; https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related
