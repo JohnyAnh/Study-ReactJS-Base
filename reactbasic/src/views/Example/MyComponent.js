@@ -18,6 +18,13 @@ class MyComponent extends React.Component {
             name: event.target.value
         })
     }
+
+    // Cách khai báo event bằng Arrow function
+    handleClickButton = () => {
+        console.log('hit the button')
+        alert('click me')
+    }
+
     render() {
         let name = 'Johny';
         return (
@@ -33,6 +40,10 @@ class MyComponent extends React.Component {
                 <div className='second'>
                     I'm {this.state.age} year old <br />
                     I'm {this.state['age']} year old
+                </div>
+                {/* Cách khai báo event bằng Arrow function */}
+                <div className="third">
+                    <button onClick={() => this.handleClickButton()}>Click me</button>
                 </div>
             </>
         )
