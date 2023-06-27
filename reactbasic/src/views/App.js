@@ -14,14 +14,7 @@ function App() {
         <p>
           Hello Word with React JohnyVu
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
         <MyComponent /> {/*Ưu tiên cái này*/}
         {/* <MyComponent></MyComponent>*/} {/*Dùng để khai báo con của Componet này} */}
       </header>
