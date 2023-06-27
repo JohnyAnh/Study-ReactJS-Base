@@ -4,7 +4,7 @@ class MyComponent extends React.Component {
 
     // obj: key : value
     state = {
-        name: 'Johny Vu',
+        name: '',
         age: 26
     }
     /**
@@ -14,6 +14,8 @@ class MyComponent extends React.Component {
 
     //Example
     handleOnchangeName = (event) => {
+        // this.setState.name = event.target.value; bad code 
+        //merge cú pháp thay thổi State
         this.setState({
             name: event.target.value
         })
@@ -21,11 +23,12 @@ class MyComponent extends React.Component {
 
     // Cách khai báo event bằng Arrow function
     handleClickButton = () => {
-        console.log('hit the button')
         alert('click me')
     }
 
+    //Rerander
     render() {
+        console.log('>>> call render:', this.state)
         let name = 'Johny';
         return (
             <>
@@ -39,7 +42,7 @@ class MyComponent extends React.Component {
                 </div>
                 <div className='second'>
                     I'm {this.state.age} year old <br />
-                    I'm {this.state['age']} year old
+                    {/* I'm {this.state['age']} year old */}
                 </div>
                 {/* Cách khai báo event bằng Arrow function */}
                 <div className="third">
