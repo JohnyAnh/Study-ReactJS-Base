@@ -5,7 +5,12 @@ class MyComponent extends React.Component {
     // obj: key : value
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            { id: 'sbcJob1', title: 'Developers', salary: '500$' },
+            { id: 'sbcJob2', title: 'Tester', salary: '400$' },
+            { id: 'sbcJob3', title: 'Project managers', salary: '1000$' }
+        ]
     }
     /**
      * JSX => return block code
@@ -53,8 +58,10 @@ class MyComponent extends React.Component {
                     />
                 </form>
                 <ChildComponent
-                    name={'child one'}
+                    name={this.state.firstName}
                     age={'25'}
+                    adress={'Ha Noi'}
+                    arrJobs={this.state.arrJobs}
                 />
                 {/* props: property */}
             </>

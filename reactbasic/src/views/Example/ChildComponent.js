@@ -22,21 +22,31 @@ class ChildComponent extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault() //preventDefault ngăn chặn load lại trang
-        console.log('Check props:', this.props)
+        console.log('Check state:', this.state)
     }
 
     //Rerender
     render() {
-        console.log('>>> call render:', this.state)
+        console.log('Check props:', this.props)
         // let name = this.props.name;
         // let age = this.props.age;
         // or
         //key:value
-        let { name, age } = this.props;
+        let { name, age, adress, arrJobs } = this.props;
 
         return (
             <>
-                <div>ChildComponent : {name} - {age}</div>
+                <div className='job-lists'>
+                    {
+                        arrJobs.map((item, index) => {
+                            return (
+                                <div key={item.id}>
+                                    {item.title} - {item.salary}
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </>
         )
     }
