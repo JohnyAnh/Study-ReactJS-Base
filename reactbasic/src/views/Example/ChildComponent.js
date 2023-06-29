@@ -22,15 +22,21 @@ class ChildComponent extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault() //preventDefault ngăn chặn load lại trang
-        console.log('Check state:', this.state)
+        console.log('Check props:', this.props)
     }
 
     //Rerender
     render() {
         console.log('>>> call render:', this.state)
+        // let name = this.props.name;
+        // let age = this.props.age;
+        // or
+        //key:value
+        let { name, age } = this.props;
+
         return (
             <>
-                <div>ChildComponent :{this.props.name}</div>
+                <div>ChildComponent : {name} - {age}</div>
             </>
         )
     }
