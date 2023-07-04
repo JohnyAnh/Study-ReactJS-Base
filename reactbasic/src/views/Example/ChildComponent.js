@@ -16,13 +16,15 @@ class ChildComponent extends React.Component {
 
         let { arrJobs } = this.props;
         let { showJobs } = this.state;
+        let check = showJobs === true ? 'showJobs = true' : 'showJobs : false';
+        console.log('Check conditional: ', check);
         return (
             <>
-                {showJobs === false &&
+                {showJobs === false ?
                     <div>
                         <button onClick={() => this.handlesShowHide()}>Show</button>
-                    </div>}
-                {showJobs &&
+                    </div>
+                    :
                     <>
                         <div className='job-lists'>
                             {
