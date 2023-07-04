@@ -2,26 +2,32 @@ import React from 'react';
 class ChildComponent extends React.Component {
 
     //Rerender
+    state = {
+        showJobs: false
+    }
     render() {
 
         let { arrJobs } = this.props;
-
+        let { showJobs } = this.state;
         return (
             <>
-                <div><button>Show</button></div>
-                <div className='job-lists'>
-                    {
-                        arrJobs.map((item, index) => {
-                            return (
-                                <div key={item.id}>
-                                    {item.title} - {item.salary}
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div><button>Hide</button></div>
-
+                {showJobs === false && <div><button>Show</button></div>}
+                {showJobs &&
+                    <>
+                        <div className='job-lists'>
+                            {
+                                arrJobs.map((item, index) => {
+                                    return (
+                                        <div key={item.id}>
+                                            {item.title} - {item.salary}
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div><button>Hide</button></div>
+                    </>
+                }
             </>
         )
     }
