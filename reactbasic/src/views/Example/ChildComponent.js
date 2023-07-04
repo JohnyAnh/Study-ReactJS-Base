@@ -1,4 +1,5 @@
 import React from 'react';
+import MyComponent from './MyComponent';
 class ChildComponent extends React.Component {
 
     //Rerender
