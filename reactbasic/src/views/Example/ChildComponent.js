@@ -5,13 +5,23 @@ class ChildComponent extends React.Component {
     state = {
         showJobs: false
     }
+
+    handlesShowHide = () => {
+        this.setState({
+            showJobs: !this.state.showJobs
+            // Dùng dấu chấm than để phủ định ý nghĩa cho nó ở đây showJobs === false thì là đúng ý nghĩa
+        })
+    }
     render() {
 
         let { arrJobs } = this.props;
         let { showJobs } = this.state;
         return (
             <>
-                {showJobs === false && <div><button>Show</button></div>}
+                {showJobs === false &&
+                    <div>
+                        <button onClick={() => this.handlesShowHide()}>Show</button>
+                    </div>}
                 {showJobs &&
                     <>
                         <div className='job-lists'>
@@ -25,7 +35,7 @@ class ChildComponent extends React.Component {
                                 })
                             }
                         </div>
-                        <div><button>Hide</button></div>
+                        <div><button onClick={() => this.handlesShowHide()}>Hide</button></div>
                     </>
                 }
             </>
